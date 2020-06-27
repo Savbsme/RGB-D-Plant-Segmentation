@@ -34,7 +34,6 @@ from pytorch_lightning.callbacks.model_checkpoint import ModelCheckpoint
 from pytorch_lightning.callbacks.model_checkpoint import Callback
 from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 
-from pytorch_lightning.
 
 class LightningTemplateModel(LightningModule):
     # """
