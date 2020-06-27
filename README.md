@@ -5,5 +5,8 @@ Code repo for implementing "instance" segmentation on RGB-Depth images taken fro
 * Things yeh 
 * ooooh yeah 
 
-![test thingy](C:\Users\Indy-Windows\Desktop\ZED.jpg)
+Inline-style: 
+![alt text](https://github.com/JonnyD1117/RGB-D-Plant-Segmentation/blob/master/ZED.jpg "Logo Title Text 1")
+
+
 
