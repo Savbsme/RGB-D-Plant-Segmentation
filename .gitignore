@@ -1,0 +1,8 @@
+*.ckpt
+*.yaml
+events.*
+*/checkpoints/
+checkpoints/
+
+*/tb_logs/
+tb_logs/
