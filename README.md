@@ -1,5 +1,16 @@
 # RGB-D-Plant-Segmentation
-Code repo for implementing "instance" segmentation on RGB-Depth images taken from 1080p stereo images. 
+Code repo for implementing "instance" segmentation on RGB-Depth images taken from 1080p stereo images.
+
+## Dependencies 
+
+* Pytorch 
+* Pytorch Lighting 
+
+
+
+
+
+## Current Progress
 
 * Example of Buttlet point 
 * Things yeh 
