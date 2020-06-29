@@ -17,10 +17,10 @@ Scripts were created on a system utilizing Python 3.7 with CUDA 10.2 on GTX 1080
 
 ## Code Structure 
 
-**Pytorch** 
+**Pytorch** <br>
 Pytorch offered a great framework within which to learn the nitty-gritty details of machine learning, while providing an intuitive and comfortable Python environment which directly enables the use of tools native to Python such as debugging, unlike Tensor Flow. With its built in code library for building custom Nerual Networks, using Pytorch has been a very educational experience in learnging how to model and train machine learning code from the ground up. It supports learning about ML and the processes required to make it functional and successful, without abstracting away so much detail from the user.
 
-**Pytorch Lightning**
+**Pytorch Lightning**<br>
 While Pytorch is very hands on, the necessity to code tedious looping, logging, and status operations, all manually, becomes an cumbersome especially when tuning hyper-parameters or adjusting methods (such as loss or optimization functions) to obtain the best performance. Pytorch Lightning which is a lightweight but incredibly useful libray (built completely from Pytorch code base) whose objective is to simplify process of creating Pytorch models by abstracting boilerplate (training loops, validation, metrics, logging...etc) simply by refactoring ones code into predetermined functions defined in the Pytorch Lightning Library. This not only has the effect of making training Pytorch models more "Keras-Like" it also has the benefit of being 100% compatible with Pytorch, since Lightning is written ontop of Pytorch and is merely adding structuring Pytorch coding. The end result is a lightweight enjoyable coding using the main concepts of Pytorch but removing the headaches of managing the large number of details previously required to be performed manually my Pytorch. 
 
 
