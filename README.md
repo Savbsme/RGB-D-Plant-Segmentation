@@ -1,7 +1,7 @@
 # RGB-D-Plant-Segmentation
 The objective of this code repo is to implement "instance" segmentation on RGB-Depth images taken from 1080p stereo images, such as Stereo Labs products. 
 
-Under the directions of Dr. Zhaodan Kong & Dr. Mohsen Mesgaran, of UC Davis Department of Mechanical & Aerospace Engineering and Plant Sciences respectively.
+Under the directions of *Dr. Zhaodan Kong* & *Dr. Mohsen Mesgaran*, of UC Davis Department of Mechanical & Aerospace Engineering and Plant Sciences respectively.
 
 ## Synopsis
 The code being implemented in this library is attemtping to perform Image Segmentation on the Kaggle "Carvana" Data set from scratch. The rational behind attemtping image segmentation on such a well studied dataset has several motivations. 
@@ -24,15 +24,30 @@ Pytorch offered a great framework within which to learn the nitty-gritty details
 While Pytorch is very hands on, the necessity to code tedious looping, logging, and status operations, all manually, becomes an cumbersome especially when tuning hyper-parameters or adjusting methods (such as loss or optimization functions) to obtain the best performance. Pytorch Lightning which is a lightweight but incredibly useful libray (built completely from Pytorch code base) whose objective is to simplify process of creating Pytorch models by abstracting boilerplate (training loops, validation, metrics, logging...etc) simply by refactoring ones code into predetermined functions defined in the Pytorch Lightning Library. This not only has the effect of making training Pytorch models more "Keras-Like" it also has the benefit of being 100% compatible with Pytorch, since Lightning is written ontop of Pytorch and is merely adding structuring Pytorch coding. The end result is a lightweight enjoyable coding using the main concepts of Pytorch but removing the headaches of managing the large number of details previously required to be performed manually my Pytorch. 
 
 
+## UNet Segmentation Model 
+
+
+## Dataset & Pre-Processing 
+The dataset used for this trial project is the "Kaggle Carvana" data set. This data set contains over 5000 image/ground truth pairs for segmentation training. The data set was manually split into training and validation subsets for training and validation loops respectively. Since the Carvana dataset contains 16 images per car, being veiwed from 360 degrees, the images/mask pairs used for validation were selected as a contiguous grouping, from the end of the dataset. This is done so as to prevent an artificially high validation accuracy which could have otherwise been caused by the model making predictions on images of cars which it previously trained on but merely view from a slightly different perspective. 
+
+Both the training data and validation are constructed using the Pytorch "Dataset" structure and written in seperate files, which are later imported into the main code. These two files are denoted as follows. 
+
+* CarvanaDS 
+* ValDS
+
+Once imported into the main code, these dataset objects are loaded into the training and validations loops using Pytorch Data Loaders, which assist the developer in how data is based into the model for training, and performs useful tasks such as abstracting away concepts likes batch size, and the number of CPU threads used to preprocess the data before being sent to the model for training. 
+
+
+
+
+
 
 Inline-style: 
 ![alt text](https://github.com/JonnyD1117/RGB-D-Plant-Segmentation/blob/master/ZED.jpg "Logo Title Text 1")
 
 ## Training: 
+### Loss Function 
+### Validation: 
+### Segmentation Performance Metrics: 
 
-## Validation: 
-
-## Metrics: 
-
-## Performance:
 
