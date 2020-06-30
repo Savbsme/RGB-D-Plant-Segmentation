@@ -27,15 +27,18 @@ While Pytorch is very hands on, the necessity to code tedious looping, logging, 
 ## UNet Segmentation Model 
 
 
+![Unet Schematic](https://github.com/JonnyD1117/RGB-D-Plant-Segmentation/blob/master/unet.png)
+
+
 ## Dataset & Pre-Processing 
 The dataset used for this trial project is the "Kaggle Carvana" data set. This data set contains over 5000 image/ground truth pairs for segmentation training. The data set was manually split into training and validation subsets for training and validation loops respectively. Since the Carvana dataset contains 16 images per car, being veiwed from 360 degrees, the images/mask pairs used for validation were selected as a contiguous grouping, from the end of the dataset. This is done so as to prevent an artificially high validation accuracy which could have otherwise been caused by the model making predictions on images of cars which it previously trained on but merely view from a slightly different perspective. 
 
 Both the training data and validation are constructed using the Pytorch "Dataset" structure and written in seperate files, which are later imported into the main code. These two files are denoted as follows. 
 
-* CarvanaDS 
-* ValDS
+* [CarvanaDS](https://github.com/JonnyD1117/RGB-D-Plant-Segmentation/blob/master/CarvanaDS.py) 
+* [ValDS](https://github.com/JonnyD1117/RGB-D-Plant-Segmentation/blob/master/ValDS.py)
 
-Once imported into the main code, these dataset objects are loaded into the training and validations loops using Pytorch Data Loaders, which assist the developer in how data is based into the model for training, and performs useful tasks such as abstracting away concepts likes batch size, and the number of CPU threads used to preprocess the data before being sent to the model for training. 
+Once imported into the main code, these dataset objects are loaded into the training and validations loops using Pytorch Data Loaders, which assist the developer in how data is passed into the model for training, and performs useful tasks such as abstracting away concepts likes batch size, and the number of CPU threads used to preprocess the data before being sent to the model for training. 
 
 
 
