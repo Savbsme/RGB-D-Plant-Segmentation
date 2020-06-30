@@ -26,7 +26,13 @@ While Pytorch is very hands on, the necessity to code tedious looping, logging, 
 
 ## UNet Segmentation Model 
 
+Unet is a type of convolutional neural network which gained popularity as the basis for many image-based machine learning tasks. The main premise of any UNet model is that unlike, a straight forward cascade of of CNNs, skip connections are added across layers of the same shape. These connections presever data fidelity in the later layers of the model, which has the benefit of preventing vanishing gradient on "deep" neural networks. The original work can be see in the following link.
 
+[Unet Paper](https://arxiv.org/abs/1505.04597)
+
+From this initial paper, the popularity of Unet has demonstrated how effect the Unet architecture is for image segmentation problems. As this is model is nearly universally known in the ML community, the objective of this research being to perform image segmentation on 4 channel (RGB-Depth) data instead of 3 channel (RGB) data seemed like a great opportunity to have a consistent model architecture whose features can be adjusted to accommidate any number of input channels required for the problem. 
+
+Below is the schematic of how data flows through the Unet structure. 
 ![Unet Schematic](https://github.com/JonnyD1117/RGB-D-Plant-Segmentation/blob/master/unet.png)
 
 
